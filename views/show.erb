@@ -1,0 +1,9 @@
+<h2> Team <%= params[:team_name] %> includes the following members:</h2>
+<ul>
+  <% @players.each do |person| %>
+    <li><%= person[:first_name] %> <%= person[:last_name] %> playing as <%= person[:position] %>
+    </li>
+  <% end %>
+</ul>
+
+

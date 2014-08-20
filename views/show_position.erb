@@ -1,0 +1,19 @@
+<h3> Player by position : <%= params[:position] %> </h3>
+
+
+<table border="1">
+
+  <tr>
+    <th> First Name </th>
+    <th> Last Name </th>
+    <th> Team </th>
+  </tr>
+  <% @players_by_position.each do |member| %>
+  <tr>
+    <td> <%= member[:first_name] %> </td>
+    <td> <%= member[:last_name] %> </td>
+    <td> <%= member[:team] %> </td>
+  </tr>
+  <% end %>
+</table>
+

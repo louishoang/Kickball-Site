@@ -1,0 +1,25 @@
+List of teams:
+<ul>
+  <% @teams.each do |member| %>
+    <% unless @team_name.include?(member[:team]) %>
+      <% @team_name << member[:team] %>
+    <% end %>
+  <% end %>
+  <% @team_name.each do |name| %>
+      <li><a href="/<%= name %>"><%= name %></a></li>
+  <% end %>
+</ul>
+
+<br><br>
+List of positions:
+
+<ul>
+  <% @teams.each do |member| %>
+    <% unless @team_position.include?(member[:position]) %>
+      <% @team_position << member[:position] %>
+    <% end %>
+  <% end %>
+  <% @team_position.each do |position| %>
+      <li><a href="/position/<%= position %>"><%= position %> </a> </li>
+  <% end %>
+</ul>
